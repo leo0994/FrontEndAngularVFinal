@@ -1,0 +1,21 @@
+<div>
+  <p class="sub-title">Transportistas</p>
+</div>
+
+<div class="main-list">
+  <div *ngFor="let transporter of transporters" class="list-group">
+    <div class="list-group-item">
+      <p class="list-item-title mb-0">Number: {{ transporter.id }}</p>
+      <p class="list-item-name mb-0">{{ transporter.name }}</p>
+      <p class="list-item-company mb-1">{{ transporter.company }}</p>
+      <div class="mb-2">
+        <div class="d-flex justify-content-between">
+          <button class="btn btn-dark" (click)="openEditModal(transporter.id)">Actualizar</button>
+          <button type="button" (click)="onDeleteTransporter(transporter)" class="btn btn-danger">Borrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

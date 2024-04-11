@@ -1,0 +1,16 @@
+<div class="form-container py-4 border-bottom">
+  <h2 class="sub-title">Agregar transportista</h2>
+  <form class="row align-items-end" (ngSubmit)="onSubmit()" #transporterForm="ngForm">
+    <div class="col-3">
+      <label class="form-label input-title" for="name">Nombre:</label>
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="transporter.name" required>
+    </div>
+    <div class="col-3">
+      <label class="form-label input-title" for="company">Empresa:</label>
+      <input type="text" class="form-control" id="company" name="company" [(ngModel)]="transporter.company" required>
+    </div>
+    <div class="col-3">
+        <button type="submit" class="btn btn-primary">Agregar</button>
+    </div>
+  </form>
+</div>
